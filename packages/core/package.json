@@ -41,7 +41,8 @@
   "scripts": {
     "lint": "eslint .",
     "test": "jest",
-    "build": "tsup src/index.ts --format esm,cjs --dts",
-    "dev": "tsup src/index.ts --format esm,cjs --dts --watch"
+    "build": "tsup src/**/*.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
+    "postinstall": "yarn build"
   }
 }
